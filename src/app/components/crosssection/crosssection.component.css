@@ -1,0 +1,77 @@
+.crosssection-card {
+    padding:0px;
+    margin: 0px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+  }
+  
+  .crosssection-widget {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+  }
+  
+  .tool-button {
+    /*float:right;*/
+    width:24px;
+    height:24px;
+  
+    margin: 2px;
+    line-height:18px;
+    background-color: #1d3d62;
+  }
+  .tool-button:hover {
+    background: lightgray;
+  }
+  .tool-button[disabled] {
+    background: white;
+  }
+  .tool-button:hover {
+    background: lightgray;
+  }
+  .tool-button[disabled] {
+    background: white;
+  }
+  
+  .int-logo-image {
+    margin: 5px;
+    background: white;
+    background-image: url(https://www.int.com/wp-content/uploads/2017/05/INT-logo-blue.png);
+    background-position-x: 3px;
+    background-position-y: 3px;
+    background-repeat: no-repeat;
+    background-size: 95px 35px;
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    color:white;
+    white-space: nowrap;
+    direction: ltr;
+  
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  

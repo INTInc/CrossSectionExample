@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'geotoolkit';
+  src: url('geotoolkit.eot?99102781');
+  src: url('geotoolkit.eot?99102781#iefix') format('embedded-opentype'),
+       url('geotoolkit.woff2?99102781') format('woff2'),
+       url('geotoolkit.woff?99102781') format('woff'),
+       url('geotoolkit.ttf?99102781') format('truetype'),
+       url('geotoolkit.svg?99102781#geotoolkit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'geotoolkit';
+    src: url('../font/geotoolkit.svg?99102781#geotoolkit') format('svg');
+  }
+}
+*/
+ 
+ [class^="geotoolkit-icon-"]:before, [class*=" geotoolkit-icon-"]:before {
+  font-family: "geotoolkit";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.geotoolkit-icon-pin:before { content: '\e800'; } /* '' */
+.geotoolkit-icon-panning-manipulator-cursor:before { content: '\e801'; } /* '' */
+.geotoolkit-icon-panning-manipulator-hand:before { content: '\e802'; } /* '' */
+.geotoolkit-icon-expand-horizontal:before { content: '\e803'; } /* '' */
+.geotoolkit-icon-rubber-band-rect:before { content: '\e804'; } /* '' */
+.geotoolkit-icon-zoom-pinch:before { content: '\e805'; } /* '' */
+.geotoolkit-icon-rubber-band-sm:before { content: '\e806'; } /* '' */
+.geotoolkit-icon-magnifier-empty-big:before { content: '\e807'; } /* '' */
+.geotoolkit-icon-magnifier-rect-big:before { content: '\e808'; } /* '' */
+.geotoolkit-icon-magnifier-rect:before { content: '\e809'; } /* '' */
+.geotoolkit-icon-magnifier-empty:before { content: '\e80a'; } /* '' */
+.geotoolkit-icon-selection-aspect-ratio:before { content: '\e80b'; } /* '' */
+.geotoolkit-icon-selection-free:before { content: '\e80c'; } /* '' */
+.geotoolkit-icon-selection-horizontal:before { content: '\e80d'; } /* '' */
+.geotoolkit-icon-selection-vertical:before { content: '\e80e'; } /* '' */
+.geotoolkit-icon-fit-to-screen:before { content: '\e80f'; } /* '' */
+.geotoolkit-icon-stop:before { content: '\e810'; } /* '' */
+.geotoolkit-icon-start:before { content: '\e811'; } /* '' */
+.geotoolkit-icon-zoom-in:before { content: '\e812'; } /* '' */
+.geotoolkit-icon-zoom-out:before { content: '\e813'; } /* '' */
+.geotoolkit-icon-remove:before { content: '\e814'; } /* '' */
+.geotoolkit-icon-refresh:before { content: '\e815'; } /* '' */
+.geotoolkit-icon-arrow-forward:before { content: '\e816'; } /* '' */
+.geotoolkit-icon-save:before { content: '\e817'; } /* '' */
+.geotoolkit-icon-settings:before { content: '\e818'; } /* '' */
+.geotoolkit-icon-print:before { content: '\e819'; } /* '' */
+.geotoolkit-icon-list:before { content: '\e81a'; } /* '' */
+.geotoolkit-icon-folder-open:before { content: '\e81b'; } /* '' */
+.geotoolkit-icon-expand:before { content: '\e81c'; } /* '' */
+.geotoolkit-icon-shrink:before { content: '\e81d'; } /* '' */
+.geotoolkit-icon-labels-left:before { content: '\e81e'; } /* '' */
+.geotoolkit-icon-labels-right:before { content: '\e81f'; } /* '' */
+.geotoolkit-icon-edit:before { content: '\e820'; } /* '' */
+.geotoolkit-icon-dots-vertical:before { content: '\e821'; } /* '' */
+.geotoolkit-icon-eye:before { content: '\e822'; } /* '' */
+.geotoolkit-icon-arrow-down:before { content: '\e823'; } /* '' */
+.geotoolkit-icon-expand-vertical:before { content: '\e824'; } /* '' */
+.geotoolkit-icon-on-off:before { content: '\e825'; } /* '' */
+.geotoolkit-icon-shrink-horizontal:before { content: '\e826'; } /* '' */
+.geotoolkit-icon-shrink-vertical:before { content: '\e827'; } /* '' */
+.geotoolkit-icon-export:before { content: '\e828'; } /* '' */
+.geotoolkit-icon-tubing:before { content: '\e829'; } /* '' */
+.geotoolkit-icon-doc-new:before { content: '\e82a'; } /* '' */

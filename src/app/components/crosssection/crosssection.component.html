@@ -1,0 +1,27 @@
+<mat-card #card class="crosssection-card"
+          [style.top.px]='top'
+          [style.left.px]='left'
+          [style.right.px]='right'
+          [style.bottom.px]='bottom'>
+  <mat-card-header style="background-color: #1d3d62">
+    <mat-card-title style="color:white;font-size: 24px">CrossSection</mat-card-title>
+  </mat-card-header>
+
+  <div style="position:absolute;top:10px;right:15px;z-index: 100;">
+    <button  class="tool-button"  matTooltip="Zoom In"
+            (click)="zoomIn()"><i class="material-icons">zoom_in</i></button>
+    <button  class="tool-button"  matTooltip="Zoom Out"
+            (click)="zoomOut()"><i class="material-icons">zoom_out</i></button>
+    <button  class="tool-button"  matTooltip="Zoom To Fit"
+            (click)="fitToBounds()"><i class="material-icons">zoom_out_map</i></button>
+    <button  class="tool-button"  matTooltip="Reset Zoom"
+            (click)="resetZoom()"><i class="material-icons">restore</i></button>
+    <button  class="tool-button"  matTooltip="Rubber band Zoom"
+            (click)="doRubberBandZoom()"><i class="material-icons">aspect_ratio</i></button>
+   </div>
+  <mat-card-content class="crosssection-widget">
+    <div #parent class='plothost'>
+        <canvas #plot class='plot' oncontextmenu='return false'></canvas>
+    </div>
+  </mat-card-content>
+</mat-card>
