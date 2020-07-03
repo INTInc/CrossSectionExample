@@ -13,6 +13,14 @@ import { TemplateService } from './services/templateservice';
 import { TrajectoryService } from './services/trajectoryservice';
 
 import { HttpClientModule } from '@angular/common/http';
+import { APP_BASE_HREF } from "@angular/common";
+
+export function getBaseHref(): string {
+  //return window.location.pathname;
+  let paths: string[] = window.location.pathname.split('/').splice(1, 1);
+  let basePath: string = (paths && paths[0]) || 'int';
+  return '/' + basePath;
+}
 
 @NgModule({
   declarations: [
@@ -29,7 +37,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     TemplateService,
-    TrajectoryService
+    TrajectoryService,
+    {
+      provide: APP_BASE_HREF,
+      useFactory: getBaseHref,
+    }
   ],
   bootstrap: [AppComponent]
 })

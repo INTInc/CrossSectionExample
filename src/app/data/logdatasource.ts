@@ -1,5 +1,5 @@
 import { DataSource as GeotoolkitDataSource } from '@int/geotoolkit/data/DataSource';
-import { obfuscate } from '@int/geotoolkit/base';
+import { obfuscate } from '@int/geotoolkit/lib';
 import { HttpClient } from '@int/geotoolkit/http/HttpClient';
 import { RemoteWelllogDataSource } from '@int/geotoolkit/intgeo/RemoteWelllogDataSource';
 import { LogCurveDataSource } from '@int/geotoolkit/welllog/data/LogCurveDataSource';
@@ -157,4 +157,4 @@ export class LogDataSource extends GeotoolkitDataSource {
         return this.curveBinding;
     }
 }
-obfuscate(LogDataSource, GeotoolkitDataSource);
+obfuscate(LogDataSource);

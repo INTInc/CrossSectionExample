@@ -1,7 +1,7 @@
 import {DataBinding} from '@int/geotoolkit/data/DataBinding';
 import {LogCurve} from '@int/geotoolkit/welllog/LogCurve';
 import {MathUtil} from '@int/geotoolkit/util/MathUtil';
-import {obfuscate} from '@int/geotoolkit/base';
+import {obfuscate} from '@int/geotoolkit/lib';
 export class CurveBinding extends DataBinding {
     constructor() {
         super();
@@ -29,4 +29,4 @@ export class CurveBinding extends DataBinding {
         // TODO: We are not allowed to set data = null
     }
 }
-obfuscate(CurveBinding, DataBinding);
+obfuscate(CurveBinding);
