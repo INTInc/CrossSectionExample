@@ -6,7 +6,7 @@ import { LogCurveDataSource } from '@int/geotoolkit/welllog/data/LogCurveDataSou
 import { DataTable } from '@int/geotoolkit/data/DataTable';
 import { CurveBinding } from './curvebinding';
 import { DataBinding } from '@int/geotoolkit/data/DataBinding';
-import { Range} from '@int/geotoolkit/util/Range';
+import { Range } from '@int/geotoolkit/util/Range';
 import { INumericalDataSeries } from '@int/geotoolkit/data/INumericalDataSeries';
 
 const _config = {
