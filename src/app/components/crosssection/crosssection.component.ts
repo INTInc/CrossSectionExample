@@ -41,7 +41,7 @@ import { Orientation } from '@int/geotoolkit/util/Orientation';
 import { Range } from '@int/geotoolkit/util/Range';
 import { Rect } from '@int/geotoolkit/util/Rect';
 import { log } from '@int/geotoolkit/base';
-import { LogDataSource } from '../../data/index';
+import { LogDataSource } from '../../data';
 import { TemplateService } from '../../services/templateservice';
 import { TrajectoryService } from 'src/app/services/trajectoryservice';
 import { SeismicView } from './seismicview';
