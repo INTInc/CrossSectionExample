@@ -8,6 +8,7 @@ import { CurveBinding } from './curvebinding';
 import { DataBinding } from '@int/geotoolkit/data/DataBinding';
 import { Range } from '@int/geotoolkit/util/Range';
 import { INumericalDataSeries } from '@int/geotoolkit/data/INumericalDataSeries';
+import { DataSeries } from '@int/geotoolkit/data/DataSeries';
 
 const _config = {
     intgeourl: 'https://demo.int.com/INTGeoServer/',
@@ -143,8 +144,8 @@ export class LogDataSource extends GeotoolkitDataSource {
             return this.curves[id];
         }
         const indexName = dataTable.getMetaData()['index'];
-        const depths = dataTable.getColumnByName(indexName);
-        const values = dataTable.getColumnByName(id);
+        const depths = dataTable.getColumnByName(indexName) as DataSeries;
+        const values = dataTable.getColumnByName(id) as DataSeries;
         // Sets data source
         const curve = values != null ? (new LogCurveDataSource({
             'depths': depths,

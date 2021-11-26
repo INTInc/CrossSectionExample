@@ -259,7 +259,7 @@ export class CrosssectionComponent implements AfterViewInit {
     }
     const minDepth = arrayD[0];
     const maxDepth = arrayD[arrayD.length - 1];
-    const trajectory = new Trajectory2d(arrayX, arrayY, arrayD, minDepth, maxDepth, true);
+    const trajectory = new Trajectory2d(arrayX, arrayY, arrayD);
     const modelLimits = new Rect(trajectory.getMinX(), trajectory.getMinY() - modelGapY,
       trajectory.getMaxX(), trajectory.getMaxY() + modelGapY);
     j = 0;
@@ -318,10 +318,7 @@ export class CrosssectionComponent implements AfterViewInit {
     const headerGroup = widget.getTrackHeader(track);
     headerGroup.setLayout(new CssLayout());
     headerGroup.setModelLimits(new Rect(start, 0, end, 1));
-    headerGroup.setAutoModelLimitsStrategy(new AutoModelLimitsStrategy({
-      'horizontalDirection': false,
-      'verticalDirection': true
-    }));
+    headerGroup.setAutoModelLimitsStrategy(new AutoModelLimitsStrategy(false, true));
     headerGroup.enableClipping(true);
     const tickGenerator = new AdaptiveTickGenerator();
     tickGenerator.getTickStyle('major').setColor('#ededed');

@@ -8,7 +8,6 @@ import { RemoteSeismicDataSource } from '@int/geotoolkit/seismic/data/RemoteSeis
 import { LineStyle } from '@int/geotoolkit/attributes/LineStyle';
 // Utils
 import { Rect } from '@int/geotoolkit/util/Rect';
-import { CacheMode } from '@int/geotoolkit/scene/Cache';
 
 
 export class SeismicView {
@@ -19,7 +18,7 @@ export class SeismicView {
         this.start = start;
         this.end = end;
         // Seismic image is cerated with independent cache
-        this.image = new SeismicImage(null, new Rect(0, 0, 1, 1), null, null, null, CacheMode.Independent)
+        this.image = new SeismicImage(null, new Rect(0, 0, 1, 1))
             .setLineStyle(new LineStyle('rgba(0,0,0,1)')
                 .setPixelSnapMode({ 'x': true, 'y': true })
             );
@@ -86,7 +85,11 @@ export class SeismicView {
         );
     }
     private createPipeline(reader) {
-        const pipeline = new SeismicPipeline('Seismic', reader, reader.getStatistics());
+        const pipeline = new SeismicPipeline({
+            'name': 'Seismic',
+            'reader': reader, 
+            'statistics': reader.getStatistics()
+        });
         pipeline.setOptions({
             'normalization': {
                 'type': NormalizationType.RMS,

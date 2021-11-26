@@ -63,7 +63,7 @@ export class DeviatedLogView {
             }
         });
         // customize
-        const axis = from(indexTrack).where((node) => node instanceof Axis).selectFirst();
+        const axis = from(indexTrack).where((node) => node instanceof Axis).selectFirst() as Axis;
         axis.setProperties({
             tickgenerator: {
                 major: {
