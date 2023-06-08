@@ -44,7 +44,7 @@ export class LogDataSource extends GeotoolkitDataSource {
                                 'unit': curveData['unitSymbol']
                             };
                             data[curveIdx] = curveData['values'];
-                            resolve();
+                            resolve(null);
                         },
                         () => {
                             reject('An error happened ');
