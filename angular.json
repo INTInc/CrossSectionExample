@@ -124,6 +124,9 @@
           }
         }
       }
-    }},
-  "defaultProject": "CrossSectionExample"
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
 }
