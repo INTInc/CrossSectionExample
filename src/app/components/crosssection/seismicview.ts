@@ -85,12 +85,8 @@ export class SeismicView {
         );
     }
     private createPipeline(reader) {
-        const pipeline = new SeismicPipeline({
-            'name': 'Seismic',
-            'reader': reader, 
-            'statistics': reader.getStatistics()
-        });
-        pipeline.setOptions({
+      const pipeline = new SeismicPipeline('Seismic', reader, reader.getStatistics());
+      pipeline.setOptions({
             'normalization': {
                 'type': NormalizationType.RMS,
                 'scale': 0.4

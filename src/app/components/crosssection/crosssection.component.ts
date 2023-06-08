@@ -318,7 +318,10 @@ export class CrosssectionComponent implements AfterViewInit {
     const headerGroup = widget.getTrackHeader(track);
     headerGroup.setLayout(new CssLayout());
     headerGroup.setModelLimits(new Rect(start, 0, end, 1));
-    headerGroup.setAutoModelLimitsStrategy(new AutoModelLimitsStrategy(false, true));
+    headerGroup.setAutoModelLimitsStrategy(new AutoModelLimitsStrategy({
+      horizontalDirection: false,
+      verticalDirection: true
+    }));
     headerGroup.enableClipping(true);
     const tickGenerator = new AdaptiveTickGenerator();
     tickGenerator.getTickStyle('major').setColor('#ededed');
