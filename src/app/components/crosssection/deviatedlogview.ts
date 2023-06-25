@@ -26,14 +26,14 @@ export class DeviatedLogView {
             .setDeviation({
                 clip: false,
                 trajectory,
-                trackWidth: deviatedTrackWidth,
+                trackwidth: deviatedTrackWidth,
                 offset: -deviatedTrackWidth / 2,
                 transformer: new PiecewiseTransformer({
                     /*scaleWidth: false,
                     minWidth: 10,
                     maxWidth: 50,*/
-                    joinSegments: false,
-                    outlineSegments: false,
+                    joinsegments: false,
+                    outlinesegments: false,
                 })
             });
         const factory = TrackFactory.getInstance();
@@ -44,7 +44,7 @@ export class DeviatedLogView {
             },
             indextype: 'depth',
             indexunit: 'ft',
-            orientation: 'horizontal',
+            // orientation: 'horizontal',
             indextrack: {
                 styles: {
                 label: {

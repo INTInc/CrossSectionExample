@@ -85,7 +85,11 @@ export class SeismicView {
         );
     }
     private createPipeline(reader) {
-      const pipeline = new SeismicPipeline('Seismic', reader, reader.getStatistics());
+      const pipeline = new SeismicPipeline({
+        'name': 'Seismic',
+        'reader': reader,
+        'statistics': reader.getStatistics()
+      });
       pipeline.setOptions({
             'normalization': {
                 'type': NormalizationType.RMS,
@@ -93,13 +97,13 @@ export class SeismicView {
             },
             'plot': {
                 'type': {
-                    'Wiggle': false,
-                    'InterpolatedDensity': true
+                    'wiggle': false,
+                    'interpolateddensity': true
                 },
-                'decimationSpacing': 5
+                'decimationspacing': 5
             },
             'colors': {
-                'colorMap': SeismicColors.getDefault().createNamedColorMap('WhiteBlack', 256)
+                'colormap': SeismicColors.getDefault().createNamedColorMap('WhiteBlack', 256)
             }
         });
         return pipeline;

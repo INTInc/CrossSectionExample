@@ -64,8 +64,8 @@ export class LogDataSource extends GeotoolkitDataSource {
             'filePath': file
         }));
         return http.get(wellDepthsUrl, {
-            'responseType': 'json',
-            'transformResponse': function (response) {
+            'responsetype': 'json',
+            'transformresponse': function (response) {
                 return response['data'];
             }
         });
