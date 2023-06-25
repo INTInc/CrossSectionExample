@@ -44,7 +44,6 @@ export class DeviatedLogView {
             },
             indextype: 'depth',
             indexunit: 'ft',
-            // orientation: 'horizontal',
             indextrack: {
                 styles: {
                 label: {
@@ -133,3 +132,4 @@ export class DeviatedLogView {
         return this.shape;
     }
 }
+
