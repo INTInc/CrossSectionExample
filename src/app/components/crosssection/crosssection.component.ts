@@ -47,6 +47,8 @@ import { TrajectoryService } from 'src/app/services/trajectoryservice';
 import { SeismicView } from './seismicview';
 import { DeviatedLogView } from './deviatedlogview';
 import { IWellTrack } from '@int/geotoolkit/welllog/multiwell/IWellTrack';
+import {LogBaseTrackHeader} from "@int/geotoolkit/welllog/header/LogBaseTrackHeader";
+import {Group} from "@int/geotoolkit/scene/Group";
 
 const TVDSStart = 2000;
 const TVDSEnd = 2600;
@@ -152,7 +154,7 @@ export class CrosssectionComponent implements AfterViewInit {
   }
   private initPlot(widget: MultiWellWidget) {
     this.plot = new Plot({
-      'canvasElement': this.canvas.nativeElement,
+      'canvaselement': this.canvas.nativeElement,
       'root': widget
     });
     widget.invalidate();
@@ -193,7 +195,7 @@ export class CrosssectionComponent implements AfterViewInit {
               'textstyle': {
                 'color': '#757575'
               },
-              'anchor': AnchorType.LeftCenter
+              'alignment': AnchorType.LeftCenter
             }
           })
         ],
@@ -208,7 +210,7 @@ export class CrosssectionComponent implements AfterViewInit {
               'textstyle': {
                 'color': '#757575'
               },
-              'anchor': AnchorType.RightCenter
+              'alignment': AnchorType.RightCenter
             }
           })
         ]
@@ -315,13 +317,10 @@ export class CrosssectionComponent implements AfterViewInit {
     track.addChild(image);
   }
   private addPanelHeader(widget: MultiWellWidget, track: CorrelationTrack, start: number, end: number) {
-    const headerGroup = widget.getTrackHeader(track);
+    const headerGroup = widget.getTrackHeader(track) as Group;
     headerGroup.setLayout(new CssLayout());
     headerGroup.setModelLimits(new Rect(start, 0, end, 1));
-    headerGroup.setAutoModelLimitsStrategy(new AutoModelLimitsStrategy({
-      horizontalDirection: false,
-      verticalDirection: true
-    }));
+    headerGroup.setAutoModelLimitsStrategy(new AutoModelLimitsStrategy(false, true));
     headerGroup.enableClipping(true);
     const tickGenerator = new AdaptiveTickGenerator();
     tickGenerator.getTickStyle('major').setColor('#ededed');

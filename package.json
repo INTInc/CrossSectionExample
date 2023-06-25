@@ -12,8 +12,8 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.9",
-    "@angular/material": "^13.3.9",
-    "@angular/cdk": "^13.3.9",
+    "@angular/material": "^15.2.9",
+    "@angular/cdk": "^15.2.9",
     "@angular/common": "^15.2.9",
     "@angular/compiler": "^15.2.9",
     "@angular/core": "^15.2.9",
@@ -21,8 +21,8 @@
     "@angular/platform-browser": "^15.2.9",
     "@angular/platform-browser-dynamic": "^15.2.9",
     "@angular/router": "^15.2.9",
-    "@int/geotoolkit": "~3.4.119",
-    "@int/impl": "~3.4.119",
+    "@int/impl": "../../geotoolkit/bin/dist/int-impl-4.0.0.tgz",
+    "@int/geotoolkit": "../../geotoolkit/bin/dist/int-geotoolkit-4.0.0.tgz",
     "rxjs": "~6.5.4",
     "tslib": "^2.5.0",
     "zone.js": "~0.11.4"
