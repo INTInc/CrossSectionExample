@@ -1,6 +1,6 @@
 # CrossSectionExample
 
-How to display cross section with GeoToolkit.JS. This example requires to have GeoToolkit.JS 2020 (3.0). Visit www.int.com, please.
+How to display cross section with GeoToolkit.JS. This example requires to have GeoToolkit.JS 2023 (4.0). Visit www.int.com, please.
 
 # How to start
 
@@ -8,7 +8,7 @@ Get access to npm.int.com. Visit www.int.com for it. Run npm install
 
 # Angular
 
-This project was created with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+This project was created with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.
 
 ## Development server
 
