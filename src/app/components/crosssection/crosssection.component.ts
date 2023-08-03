@@ -229,12 +229,12 @@ export class CrosssectionComponent implements AfterViewInit {
   private initRubberBandTool(widget) {
     const rubberBandTool = new RubberBand(widget.getTrackManipulatorLayer())
       .setEnabled(false)
-      .addListener(ToolsEvents.onStateChanged, (sender) => {
+      .on(ToolsEvents.onStateChanged, (event, sender) => {
         widget.getToolByName('panningTools').setEnabled(!sender.isEnabled());
         const wellToolsContainer = widget.getToolByName('well-tools');
         wellToolsContainer.setEnabled(!sender.isEnabled());
       })
-      .addListener(RubberBandEvents.onZoomEnd, (sender, eventArgs) => {
+      .on(RubberBandEvents.onZoomEnd, (event, sender, eventArgs) => {
         let newModelLimits = eventArgs.getArea();
         // convert to device coordinate
         newModelLimits = widget.getTrackManipulatorLayer().getSceneTransform().transformRect(newModelLimits);
